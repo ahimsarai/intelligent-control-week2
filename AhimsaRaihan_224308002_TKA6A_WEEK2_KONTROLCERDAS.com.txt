@@ -1,0 +1,26 @@
+A.	Bagaimana Performa Model dalam Mendeteksi Warna?
+Performa model dalam deteksi warna diukur berdasarkan akurasi, presisi, dan waktu prediksi real-time.
+•	Decision Tree: Cepat dan mudah dipahami, namun dapat overfitting jika data terbatas.
+•	KNN: Akurat untuk dataset kecil, tetapi prediksi lebih lambat pada dataset besar karena perhitungan jarak.
+•	Faktor yang Mempengaruhi Performa:
+o	Akurasi skala warna (RGB, HSV).
+o	Kualitas pencahayaan saat pengambilan gambar.
+o	Proses normalisasi yang konsisten.
+B.	Bagaimana Perbedaan Akurasi Jika Jumlah Dataset Ditambah?
+•	Dataset Lebih Besar:
+o	Decision Tree: Akurasi meningkat karena model mempelajari lebih banyak pola warna, tetapi risiko overfitting jika pohon terlalu dalam.
+o	KNN: Lebih akurat karena tetangga terdekat lebih representatif, namun waktu prediksi bertambah karena lebih banyak data yang dihitung.
+•	Kesimpulan: Dataset yang lebih besar dan beragam (misalnya, warna di bawah pencahayaan berbeda) akan memberikan hasil klasifikasi yang lebih stabil dan akurasi yang lebih tinggi.
+C.	Bagaimana Cara Meningkatkan Kinerja Model Klasifikasi?
+Beberapa metode untuk meningkatkan kinerja model:
+•	Optimasi Parameter Model:
+o	Decision Tree: Sesuaikan kedalaman pohon (max_depth) dan minimal sampel per node (min_samples_split) untuk mencegah overfitting.
+o	KNN: Pilih nilai K yang optimal menggunakan teknik validasi silang (cross-validation).
+•	Feature Engineering:
+o	Gunakan konversi warna lain seperti HSV atau LAB, yang lebih robust terhadap variasi pencahayaan.
+•	Peningkatan Dataset:
+o	Tambahkan data augmentasi seperti gambar dari berbagai kondisi pencahayaan dan latar belakang.
+•	Normalisasi yang Konsisten:
+o	Pastikan semua data menggunakan scaler yang sama untuk menjaga konsistensi skala.
+•	Pemilihan Algoritma Tambahan:
+o	Pertimbangkan algoritma seperti Random Forest atau Support Vector Machine (SVM) untuk klasifikasi warna yang lebih kompleks.
